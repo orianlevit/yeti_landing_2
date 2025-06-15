@@ -42,7 +42,7 @@ const App = () => {
           <View style={[styles.videoContainer, styles.clickableVideo]} onClick={() => handleVideoClick('left')}>
             <video 
               ref={videoRefs.left}
-              src="/videos/1.mp4"
+              src={`${process.env.PUBLIC_URL}/videos/1.mp4`}
               style={styles.video}
               playsInline
               loop
@@ -57,7 +57,7 @@ const App = () => {
           <View style={[styles.videoContainer, styles.clickableVideo]} onClick={() => handleVideoClick('center')}>
             <video 
               ref={videoRefs.center}
-              src="/videos/2.mp4"
+              src={`${process.env.PUBLIC_URL}/videos/2.mp4`}
               style={styles.video}
               playsInline
               autoPlay
@@ -73,7 +73,7 @@ const App = () => {
           <View style={[styles.videoContainer, styles.clickableVideo]} onClick={() => handleVideoClick('right')}>
             <video 
               ref={videoRefs.right}
-              src="/videos/3.mp4"
+              src={`${process.env.PUBLIC_URL}/videos/3.mp4`}
               style={styles.video}
               playsInline
               loop

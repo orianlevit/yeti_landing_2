@@ -1,43 +1,35 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { useFormContext } from '../context/FormContext';
-import BeastModeQuestion from './BeastModeQuestion';
-import YetiVibeQuestion from './YetiVibeQuestion';
-import ASMRQuestion from './ASMRQuestion';
-import RecipientNameQuestion from './RecipientNameQuestion';
-import OccasionQuestion from './OccasionQuestion';
-import CustomMessageQuestion from './CustomMessageQuestion';
-import EmailQuestion from './EmailQuestion';
-import { FORM_DIMENSIONS } from '../styles/formStyles';
 
 const YetiForm = () => {
-  const { currentQuestion } = useFormContext();
+  React.useEffect(() => {
+    // Ensure the script is loaded
+    const script = document.createElement('script');
+    script.src = 'https://greeting-yet.involve.me/embed';
+    script.async = true;
+    document.body.appendChild(script);
 
-  const renderQuestion = () => {
-    switch (currentQuestion) {
-      case 0:
-        return <BeastModeQuestion />;
-      case 1:
-        return <YetiVibeQuestion />;
-      case 2:
-        return <ASMRQuestion />;
-      case 3:
-        return <RecipientNameQuestion />;
-      case 4:
-        return <OccasionQuestion />;
-      case 5:
-        return <CustomMessageQuestion />;
-      case 6:
-        return <EmailQuestion />;
-      default:
-        return null;
-    }
-  };
+    return () => {
+      // Cleanup on unmount
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <View style={styles.formWrapper}>
       <View style={styles.formContainer}>
-        {renderQuestion()}
+        <div 
+          className="involveme_embed" 
+          data-project="yeti" 
+          data-title="yeti"
+          style={{
+            width: '100%',
+            height: '100%',
+            border: 'none',
+            borderRadius: '16px',
+            overflow: 'hidden'
+          }}
+        />
       </View>
     </View>
   );
@@ -46,14 +38,14 @@ const YetiForm = () => {
 const styles = StyleSheet.create({
   formWrapper: {
     width: '100%',
+    height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 20,
+    padding: 16,
   },
   formContainer: {
     width: '100%',
-    maxWidth: FORM_DIMENSIONS.width,
-    height: FORM_DIMENSIONS.height,
+    height: '100%',
     backgroundColor: 'white',
     borderRadius: 16,
     overflow: 'hidden',

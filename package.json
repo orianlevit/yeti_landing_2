@@ -9,6 +9,7 @@
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "gh-pages": "^6.3.0",
+    "posthog-js": "^1.252.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.72.6",

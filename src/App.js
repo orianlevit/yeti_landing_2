@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
   funnelContainer: {
     width: '100%',
     maxWidth: 1000,
-    height: 950,
+    height: 1100,
     marginTop: 16,
   },
   funnelIframe: {

@@ -26,7 +26,8 @@
     "dev": "concurrently \"npm run start\" \"npm run server\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && cp -r build/* . && git add . && git commit -m 'Deploy updates to www.aicrazyvid.com' && git push origin main"
   },
   "eslintConfig": {
     "extends": [

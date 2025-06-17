@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/yeti_landing_2/static/js/main.0ce84e1f.js",
-    "index.html": "/yeti_landing_2/index.html",
-    "main.0ce84e1f.js.map": "/yeti_landing_2/static/js/main.0ce84e1f.js.map"
+    "main.js": "/static/js/main.ec0c7b00.js",
+    "index.html": "/index.html",
+    "main.ec0c7b00.js.map": "/static/js/main.ec0c7b00.js.map"
   },
   "entrypoints": [
-    "static/js/main.0ce84e1f.js"
+    "static/js/main.ec0c7b00.js"
   ]
 }

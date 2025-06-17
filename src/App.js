@@ -36,7 +36,7 @@ const App = () => {
       </View>
 
       <View style={styles.mainContent}>
-        <Text style={[styles.heroTitle, styles.calSans]}>Make your custom greeting from the TESTING!</Text>
+        <Text style={[styles.heroTitle, styles.calSans]}>Make your custom greeting from the Yeti!</Text>
         
         <View style={styles.videoSection}>
           <View style={[styles.videoContainer, styles.clickableVideo]} onClick={() => handleVideoClick('left')}>
